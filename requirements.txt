@@ -1,0 +1,13 @@
+# Core API dependencies
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+
+# Lexicon-based fallback engine (VADER) - small, pure Python, offline
+vaderSentiment>=3.3.2
+
+# --- Optional: transformer engine -------------------------------------
+# Needed only when SENTIMENT_ENGINE=transformer (or auto mode trying the
+# transformer first). Large download (~2 GB with CPU torch):
+#
+#   pip install transformers>=4.40 torch --index-url https://download.pytorch.org/whl/cpu
